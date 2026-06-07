@@ -32,10 +32,10 @@ Thread(target=run_flask, daemon=True).start()
 # ═══════════════════════════════════════════
 #              ⚙️ تنظیمات اصلی
 # ═══════════════════════════════════════════
-TOKEN = '8576320592:AAFLipMaJiDFJyDCalDemS5ZikTcM-OYC-0'
+TOKEN = os.environ.get('BOT_TOKEN', '')
 ADMIN_ID = 7533340777
 SITE_URL = 'https://sfor.onrender.com'
-GEMINI_API_KEY = 'AQ.Ab8RN6K7iZ7aqtwM1FrDdY18TiWZm_jfto-12CQ_qf4Kq7mY_w'
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
 GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
 BOT_VERSION = '2.0.0'
 
