@@ -371,7 +371,7 @@ def ask_ai(user_id, message, use_history=True):
             timeout=30
         )
         data = response.json()
-        reply = data['candidates'][0]['content']['parts'][0]['text']
+        reply = data['candidates'][0]['content']['parts'][0]['text'] if 'candidates' in data else data.get('error', {}).get('message', str(data))
         user_ai_history[user_id].append({"role": "model", "parts": [{"text": reply}]})
         return reply
     except Exception as e:
