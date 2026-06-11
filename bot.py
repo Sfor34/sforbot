@@ -1115,10 +1115,10 @@ def handle_private_message(message):
             f'🤖 {reply}',
             uid, msg.message_id,
             parse_mode='Markdown',
-            reply_markup=main_menu()
+            reply_markup=None
         )
     except:
-        bot.send_message(uid, f'🤖 {reply}', reply_markup=main_menu())
+        bot.send_message(uid, f'🤖 {reply}')
 
 
 # ═══════════════════════════════════════════
