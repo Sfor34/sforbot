@@ -35,7 +35,7 @@ Thread(target=run_flask, daemon=True).start()
 TOKEN = os.environ.get('BOT_TOKEN', '')
 ADMIN_ID = 7533340777
 SITE_URL = 'https://sfor.onrender.com'
-GROK_API_KEY = os.environ.get('GROK_API_KEY', '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')
+GROK_API_KEY = os.environ.get('GROK_API_KEY', '')
 GROK_URL = 'https://api.groq.com/openai/v1/chat/completions'
 BOT_VERSION = '2.0.0'
 
